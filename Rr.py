@@ -1,13 +1,10 @@
 print "\t\t\t\t\t\t\t\t\t\t\t\t\tRound Robin\t\t\t\t\t\t\t\t\t\t\t\t"
-print "\t\t\t\t\t\t\t\t\t\tThe Input wait is for Even processses\t\t\t\t\t\t\t\t\t\t"
 burst_time = []
 process_name = []
 order = []
 wait = []
 remaining_bt = []
-wait_input = []
 turn_around = []
-
 print "Enter the number of processes"
 n = input()
 wait = [int(0) for i in range(n)]
