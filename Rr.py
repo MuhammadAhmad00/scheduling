@@ -57,17 +57,19 @@ for i in range(n):
                 break
 
 print "Waiting time for the processes"
+sum = int(0)
 for i in range(n):
     print wait[i]
-    sum += int(wait[i])
+    sum += wait[i]
 print "Average waiting time"
 print sum/n
 print "\t\t\t\t\t\t\t\t\t\t\t\tNow find the final turn round time"
 turn_around=[int(burst_time[i]+wait[i]) for i in range(n)]
 print"Turn round time of the processes"
+turn =int(0)
 for i in range(n):
     print turn_around[i]
-    turn += int(turn_around[i])
+    turn += turn_around[i]
 print "Average turn around time"
 print turn/n
 
