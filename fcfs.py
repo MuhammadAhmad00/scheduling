@@ -3,6 +3,7 @@ burst_time = []
 arrival_time = []
 finish_time =[]
 waiting_time =[]
+sum =int(0)
 print "Enter the number of processes"
 n = int(input())
 print "Enter the Name of the processes"
@@ -26,11 +27,13 @@ for i in range(n):
 print "Process Name"+"\t"+"Arrival time"+"\t"+"Burst time"
 for i in range(n):
     print name[i],"\t\t\t",arrival_time[i],"\t\t\t\t",burst_time[i]
+    finish_time = [int(arrival_time[i] + burst_time[i]) for i in range(n)]
+    waiting_time=[int(finish_time[i]-arrival_time[i]) for i in range(n)]
+for  i in range(n):
+        sum += int(waiting_time[i])
+print "waiting time of Process"
 for i in range(n):
-    finish_time[i] = arrival_time[i] + burst_time[i]
-    waiting_time[i]=finish_time[i]-arrival_time[i+1]
-    print "waiting time",waiting_time
-    sum+=waiting_time[i]
+    print name[i],"\t\t",waiting_time[i]
 print "Average waiting time ",sum/n
 
 
